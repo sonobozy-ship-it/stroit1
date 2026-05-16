@@ -112,7 +112,21 @@ export class GameManager {
     this.workers.processTick(this.state, (msg) => this.addLog(msg));
 
     if (this.state.currentProject !== null) {
-      this.projects.processTick(this.state, (msg) => this.addLog(msg));
+      this.projects.processTick(
+        this.state,
+        (msg) => this.addLog(msg),
+        (proj, s) => this.finance.rollPaymentOutcome(proj, s),
+        (clientId, s) => this.clientRelations.getPaymentSpeedBonus(clientId, s),
+        (s, log) => this.projects.finalizeProject(
+          s,
+          log,
+          (p, gs) => this.clientRelations.recordCompletion(p, gs, (msg) => this.addLog(msg)),
+          (p, gs) => this.clientRelations.recordAbandonment(p, gs, (msg) => this.addLog(msg)),
+          (gs, mood) => this.battlePass.onProjectCompleted(gs, mood, (msg) => this.addLog(msg)),
+          (taskId, gs, amt) => this.battlePass.progressTask(taskId, gs, amt),
+          (gs) => this.progression.checkUnlocks(gs, (msg) => this.addLog(msg)),
+        ),
+      );
     }
 
     this.events.processTick(this.state, (msg) => this.addLog(msg));
@@ -142,7 +156,13 @@ export class GameManager {
   }
 
   resolveEvent(instanceId: string, optionIndex: number, usedAd = false): void {
-    this.events.resolve(instanceId, optionIndex, usedAd, this.state, (msg) => this.addLog(msg));
+    this.events.resolve(
+      instanceId,
+      optionIndex,
+      usedAd,
+      this.state,
+      (msg) => this.addLog(msg),
+    );
     this.notify();
   }
 
@@ -152,7 +172,12 @@ export class GameManager {
   }
 
   signKS2(): void {
-    this.projects.signKS2(this.state, (msg) => this.addLog(msg));
+    this.projects.signKS2(
+      this.state,
+      (msg) => this.addLog(msg),
+      (proj, s) => this.finance.rollPaymentOutcome(proj, s),
+      (clientId, s) => this.clientRelations.getPaymentSpeedBonus(clientId, s),
+    );
     this.notify();
   }
 

@@ -59,3 +59,9 @@ crashlytics-build.properties
 
 # macOS
 .DS_Store
+
+# Web project
+web/node_modules/
+web/dist/
+web/android/
+web/ios/
