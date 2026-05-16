@@ -1,0 +1,10 @@
+{
+  "appId": "com.stroyka.game",
+  "appName": "Стройка",
+  "webDir": "dist",
+  "android": {
+    "buildOptions": {
+      "releaseType": "APK"
+    }
+  }
+}
