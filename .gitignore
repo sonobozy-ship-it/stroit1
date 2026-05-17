@@ -65,3 +65,7 @@ web/node_modules/
 web/dist/
 web/android/
 web/ios/
+
+# Keystores (sensitive)
+*.keystore
+*.jks

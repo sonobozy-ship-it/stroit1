@@ -1,4 +1,4 @@
-import { GameState, createGameState } from './GameState';
+import { GameState, ContractDefinition, WorkerDefinition, createGameState } from './GameState';
 import {
   FinanceSystem,
   WorkerSystem,
@@ -11,6 +11,7 @@ import {
   BattlePassSystem,
   SaveSystem,
 } from './index';
+import { CONTRACTS, WORKERS, EVENTS } from '../data';
 
 /**
  * Central coordinator. Owns GameState, drives the tick loop,
