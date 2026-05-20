@@ -30,18 +30,19 @@ export class ProgressionSystem {
   }
 
   private unlockByProjectCount(state: GameState, count: number): void {
-    if (count >= 1)  state.unlockedWorkerIds.add('akhmed');
+    if (count >= 1)  state.unlockedWorkerIds.add('sanya');
+    if (count >= 1)  state.unlockedContractIds.add('kvartira_premium');
     if (count >= 2)  state.unlockedContractIds.add('ofis_small');
-    if (count >= 2)  state.unlockedWorkerIds.add('kolya_welder');
-    if (count >= 3)  state.unlockedWorkerIds.add('fedya_electrician');
-    if (count >= 4)  state.unlockedContractIds.add('magazin');
-    if (count >= 5)  state.unlockedWorkerIds.add('petrovich_foreman');
-    if (count >= 5)  state.unlockedContractIds.add('sklad');
-    if (count >= 7)  state.unlockedWorkerIds.add('sasha_foreman');
-    if (count >= 10) state.unlockedContractIds.add('tc_3_floor');
-    if (count >= 10) state.unlockedContractIds.add('goszakaz_school');
-    if (count >= 15) state.unlockedWorkerIds.add('doc_specialist');
-    if (count >= 20) state.unlockedContractIds.add('goszakaz_hospital');
+    if (count >= 2)  state.unlockedWorkerIds.add('misha');
+    if (count >= 3)  state.unlockedWorkerIds.add('petya');
+    if (count >= 4)  state.unlockedContractIds.add('magazin_remont');
+    if (count >= 5)  state.unlockedWorkerIds.add('arkadiy');
+    if (count >= 5)  state.unlockedContractIds.add('kottedzh');
+    if (count >= 7)  state.unlockedWorkerIds.add('igor');
+    if (count >= 10) state.unlockedContractIds.add('biznes_tsentr');
+    if (count >= 10) state.unlockedContractIds.add('detskiy_sad');
+    if (count >= 15) state.unlockedWorkerIds.add('dima');
+    if (count >= 20) state.unlockedContractIds.add('goskontrakt');
   }
 
   // ─────────────────────────────────────────────────────────

@@ -181,22 +181,22 @@ export class BattlePassSystem {
     [5,  { level: 5,  isPremium: false, money: 0,       connections: 10,  workerId: '',               contractId: '',               description: '+10 Связей' }],
     [10, { level: 10, isPremium: false, money: 50_000,  connections: 0,   workerId: '',               contractId: '',               description: '+50 000 ₽' }],
     [15, { level: 15, isPremium: false, money: 0,       connections: 25,  workerId: '',               contractId: '',               description: '+25 Связей' }],
-    [20, { level: 20, isPremium: false, money: 0,       connections: 0,   workerId: 'akhmed',         contractId: '',               description: 'Ахмед разблокирован' }],
+    [20, { level: 20, isPremium: false, money: 0,       connections: 0,   workerId: 'sanya',          contractId: '',               description: 'Саня-Сантехник разблокирован' }],
     [25, { level: 25, isPremium: false, money: 150_000, connections: 0,   workerId: '',               contractId: '',               description: '+150 000 ₽' }],
     [30, { level: 30, isPremium: false, money: 0,       connections: 50,  workerId: '',               contractId: '',               description: '+50 Связей' }],
     [40, { level: 40, isPremium: false, money: 300_000, connections: 0,   workerId: '',               contractId: '',               description: '+300 000 ₽' }],
-    [50, { level: 50, isPremium: false, money: 0,       connections: 100, workerId: '',               contractId: 'goszakaz_premium', description: 'Госконтракт + 100 Связей' }],
+    [50, { level: 50, isPremium: false, money: 0,       connections: 100, workerId: '',               contractId: 'goskontrakt',      description: 'Госконтракт + 100 Связей' }],
   ]);
 
   private static readonly PREMIUM_REWARDS = new Map<number, BattlePassReward>([
     [1,  { level: 1,  isPremium: true, money: 0,       connections: 20,  workerId: '',                  contractId: '',                 description: '+20 Связей' }],
     [5,  { level: 5,  isPremium: true, money: 30_000,  connections: 0,   workerId: '',                  contractId: '',                 description: '+30 000 ₽' }],
-    [10, { level: 10, isPremium: true, money: 0,       connections: 0,   workerId: 'kolya_welder',      contractId: '',                 description: 'Коля-Сварщик разблокирован' }],
+    [10, { level: 10, isPremium: true, money: 0,       connections: 0,   workerId: 'misha',             contractId: '',                 description: 'Миша-Электрик разблокирован' }],
     [15, { level: 15, isPremium: true, money: 0,       connections: 50,  workerId: '',                  contractId: '',                 description: '+50 Связей' }],
     [20, { level: 20, isPremium: true, money: 200_000, connections: 0,   workerId: '',                  contractId: '',                 description: '+200 000 ₽' }],
-    [25, { level: 25, isPremium: true, money: 0,       connections: 0,   workerId: 'fedya_electrician', contractId: '',                 description: 'Дядя Федя разблокирован' }],
+    [25, { level: 25, isPremium: true, money: 0,       connections: 0,   workerId: 'petya',             contractId: '',                 description: 'Петя-Маляр разблокирован' }],
     [30, { level: 30, isPremium: true, money: 0,       connections: 100, workerId: '',                  contractId: '',                 description: '+100 Связей' }],
     [40, { level: 40, isPremium: true, money: 500_000, connections: 0,   workerId: '',                  contractId: '',                 description: '+500 000 ₽' }],
-    [50, { level: 50, isPremium: true, money: 0,       connections: 200, workerId: 'sasha_foreman',     contractId: 'nightmare_goszakaz', description: 'Сашок-Прораб + VIP контракт' }],
+    [50, { level: 50, isPremium: true, money: 0,       connections: 200, workerId: 'igor',              contractId: 'biznes_tsentr',    description: 'Игорь-Отделочник + VIP контракт' }],
   ]);
 }

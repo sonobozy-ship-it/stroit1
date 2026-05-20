@@ -58,7 +58,7 @@ export class WorkerSystem {
 
   private getForemenDrinkBonus(state: GameState): number {
     // Foreman reduces drink risk by 40%
-    return state.hiredWorkers.some(w => w.workerId === 'petrovich_foreman') ? 0.6 : 1;
+    return state.hiredWorkers.some(w => w.isForeman) ? 0.6 : 1;
   }
 
   // ─────────────────────────────────────────────────────────

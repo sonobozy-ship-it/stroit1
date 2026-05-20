@@ -19,7 +19,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Ждать поставки',
         cost: 0,
-        progressPenalty: -5,
+        progressPenalty: -0.05,
         stressDelta: 3,
         reputationDelta: 0,
         clientMoodDelta: -5,
@@ -56,7 +56,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Заменить партию (-50 000 ₽)',
         cost: 50_000,
-        progressPenalty: -3,
+        progressPenalty: -0.03,
         stressDelta: 2,
         reputationDelta: 0,
         clientMoodDelta: 5,
@@ -93,7 +93,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Арендовать инструмент (-20 000 ₽)',
         cost: 20_000,
-        progressPenalty: -2,
+        progressPenalty: -0.02,
         stressDelta: 2,
         reputationDelta: 0,
         clientMoodDelta: 0,
@@ -104,7 +104,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Сдать в ремонт (-40 000 ₽, 2 дня простоя)',
         cost: 40_000,
-        progressPenalty: -8,
+        progressPenalty: -0.08,
         stressDelta: 3,
         reputationDelta: 0,
         clientMoodDelta: -5,
@@ -132,7 +132,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Найти временного рабочего (-15 000 ₽)',
         cost: 15_000,
-        progressPenalty: -2,
+        progressPenalty: -0.02,
         stressDelta: 3,
         reputationDelta: 0,
         clientMoodDelta: 0,
@@ -143,7 +143,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Найти временного (просмотреть рекламу)',
         cost: 0,
-        progressPenalty: -2,
+        progressPenalty: -0.02,
         stressDelta: 2,
         reputationDelta: 0,
         clientMoodDelta: 0,
@@ -169,7 +169,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Лично разобраться (стресс +10)',
         cost: 0,
-        progressPenalty: -2,
+        progressPenalty: -0.02,
         stressDelta: 10,
         reputationDelta: 0,
         clientMoodDelta: 0,
@@ -180,7 +180,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Уволить зачинщика',
         cost: 0,
-        progressPenalty: -5,
+        progressPenalty: -0.05,
         stressDelta: 3,
         reputationDelta: 0,
         clientMoodDelta: 0,
@@ -217,7 +217,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Сделать вид, что не замечаете',
         cost: 0,
-        progressPenalty: -8,
+        progressPenalty: -0.08,
         stressDelta: 1,
         reputationDelta: 0,
         clientMoodDelta: 0,
@@ -282,7 +282,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Согласиться (+100 000 ₽, +3 дня)',
         cost: -100_000,    // player earns
-        progressPenalty: -5,
+        progressPenalty: -0.05,
         stressDelta: 2,
         reputationDelta: 2,
         clientMoodDelta: 10,
@@ -319,7 +319,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Провести осмотр сейчас',
         cost: 0,
-        progressPenalty: -2,
+        progressPenalty: -0.02,
         stressDelta: 8,
         reputationDelta: 2,
         clientMoodDelta: 10,
@@ -395,7 +395,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Починить немедленно (-60 000 ₽)',
         cost: 60_000,
-        progressPenalty: -3,
+        progressPenalty: -0.03,
         stressDelta: 5,
         reputationDelta: 0,
         clientMoodDelta: 5,
@@ -434,7 +434,7 @@ export const EVENTS: GameEventDefinition[] = [
       {
         label: 'Ждать улучшения погоды',
         cost: 0,
-        progressPenalty: -6,
+        progressPenalty: -0.06,
         stressDelta: 2,
         reputationDelta: 0,
         clientMoodDelta: -5,

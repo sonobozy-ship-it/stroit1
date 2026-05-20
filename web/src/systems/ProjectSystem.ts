@@ -105,19 +105,19 @@ export class ProjectSystem {
     let totalEff = activeWorkers.reduce((sum, w) => sum + w.efficiency, 0);
 
     // Foreman bonus: reduces inefficiency
-    const hasForeman = activeWorkers.some(w => w.workerId === 'petrovich_foreman');
+    const hasForeman = activeWorkers.some(w => w.isForeman);
     if (hasForeman) totalEff *= 1.2;
 
     const progressPerTick = totalEff / 50;
-    p.progress = Math.min(100, p.progress + progressPerTick);
+    p.progress = Math.min(1, p.progress + progressPerTick);
 
-    // Advance phase
-    if (p.phase === ProjectPhase.Construction && p.progress >= 70) {
+    // Advance phase (progress is 0–1)
+    if (p.phase === ProjectPhase.Construction && p.progress >= 0.7) {
       p.phase = ProjectPhase.Finishing;
       addLog('🏗️ Основные работы завершены. Переходим к отделке.');
     }
 
-    if (p.progress >= 100) {
+    if (p.progress >= 1.0) {
       p.phase = ProjectPhase.Documents;
       p.phaseProgress = 0;
       addLog(`✅ ${p.name} — работы завершены! Собираем ИД...`);
