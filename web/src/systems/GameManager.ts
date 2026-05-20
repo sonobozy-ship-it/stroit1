@@ -53,10 +53,10 @@ export class GameManager {
     this.state = this.save.load();
 
     this.finance = new FinanceSystem();
-    this.workers = new WorkerSystem();
-    this.projects = new ProjectSystem();
+    this.workers = new WorkerSystem(WORKERS);
+    this.projects = new ProjectSystem(CONTRACTS);
     this.documents = new DocumentSystem();
-    this.events = new EventSystem();
+    this.events = new EventSystem(EVENTS);
     this.clientRelations = new ClientRelationsSystem();
     this.progression = new ProgressionSystem();
     this.foremanTheft = new ForemanTheftSystem();
@@ -194,6 +194,7 @@ export class GameManager {
 
   // ─────────────────────────────────────────────────────────
   addLog(message: string): void {
+    if (!message.trim()) return;
     this.state.log.unshift({ message, tick: this.state.tick });
     if (this.state.log.length > 60) {
       this.state.log.length = 60;
